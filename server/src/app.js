@@ -9,9 +9,10 @@ app.use(express.json())
 
 app.use(cors())
 
-app.get('/status', (req, res) => {
+app.post('/register', (req, res) => {
   res.send({
-    message: 'Hello world'
+    message: `${req.body.email}, your user was registered!!!`,
+    request: `request: ${req.body}`
   })
 })
 
